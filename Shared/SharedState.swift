@@ -75,6 +75,14 @@ enum SharedState {
         save(dots, to: "event-dots.json")
     }
 
+    static var holidaySchedules: MainlandHolidays.DownloadedSchedules {
+        load(MainlandHolidays.DownloadedSchedules.self, from: "holiday-schedules.json") ?? [:]
+    }
+
+    static func saveHolidaySchedules(_ schedules: MainlandHolidays.DownloadedSchedules) {
+        save(schedules, to: "holiday-schedules.json")
+    }
+
     private static func load<T: Decodable>(_ type: T.Type, from name: String) -> T? {
         guard let data = try? Data(contentsOf: directory.appending(path: name)) else { return nil }
         return try? JSONDecoder().decode(type, from: data)

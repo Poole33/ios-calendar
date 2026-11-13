@@ -1,5 +1,7 @@
+import Foundation
+
 enum MainlandHolidays {
-    enum Mark {
+    enum Mark: Codable, Equatable, Sendable {
         case rest(String)
         case work
 
@@ -17,6 +19,13 @@ enum MainlandHolidays {
             }
         }
     }
+
+    struct DownloadedSchedule: Codable {
+        let days: [String: Mark]
+        let checkedAt: Date
+    }
+
+    typealias DownloadedSchedules = [Int: DownloadedSchedule]
 
     private struct YearSchedule {
         let holidays: [(month: Int, days: ClosedRange<Int>, name: String)]
@@ -43,7 +52,9 @@ enum MainlandHolidays {
         ),
     ]
 
-    static func mark(on date: CalendarDay) -> Mark? {
+    static func mark(on date: CalendarDay, using downloaded: DownloadedSchedules = [:]) -> Mark? {
+        if date.month == 12, let mark = downloaded[date.year + 1]?.days[date.id] { return mark }
+        if let schedule = downloaded[date.year] { return schedule.days[date.id] }
         guard let schedule = schedules[date.year] else { return nil }
         if schedule.workDays.contains(date.month * 100 + date.day) { return .work }
         let holiday = schedule.holidays.first { $0.month == date.month && $0.days.contains(date.day) }

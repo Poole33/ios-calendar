@@ -5,10 +5,12 @@ import WidgetKit
 struct CalendarScreen: View {
     @Environment(\.scenePhase) private var phase
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @ViewState private var today = CalendarDay.today
     @ViewState private var selection: CalendarDay?
     @ViewState private var appearance = SharedState.appearance
     @ViewState private var systemCalendar = SystemCalendar()
+    @ViewState private var holidayUpdates = HolidayUpdates()
     @ViewState private var sheet: Sheet?
 
     private enum Sheet: Identifiable {
@@ -26,35 +28,22 @@ struct CalendarScreen: View {
     private var selected: CalendarDay { selection ?? today }
     private var palette: CalendarPalette { CalendarPalette(appearance: appearance, scheme: colorScheme) }
 
+    private static let months = CalendarDay.supportedYears.flatMap { year in
+        (1...12).map { month in CalendarDay(year, month, 1)! }
+    }
+
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
                 monthHeader
                     .padding(.bottom, 7)
-                MonthGrid(dates: selected.monthGrid(), palette: palette, rowHeight: 44) { date in
-                    let cell = CalendarCell(
-                        date: date, selected: selected, today: today,
-                        dots: systemCalendar.dots(on: date), palette: palette, compact: false
-                    )
-                    if date.isSupported {
-                        Button { select(date) } label: { cell }
-                            .buttonStyle(.plain)
-                    } else {
-                        cell
-                    }
-                }
-                .simultaneousGesture(
-                    DragGesture(minimumDistance: 28).onEnded { value in
-                        let x = value.translation.width
-                        let y = value.translation.height
-                        if abs(x) > abs(y) && abs(x) >= 42 {
-                            select(selected.addingMonths(x < 0 ? 1 : -1))
-                        }
-                    }
-                )
-                .padding(.bottom, 8)
+                monthPager
+                    .padding(.bottom, 8)
 
-                AgendaView(date: selected, palette: palette, calendar: systemCalendar)
+                AgendaView(
+                    date: selected, palette: palette, calendar: systemCalendar,
+                    holidaySchedules: holidayUpdates.schedules
+                )
                     .padding(.horizontal, -14)
             }
             .padding(.horizontal, 14)
@@ -89,6 +78,17 @@ struct CalendarScreen: View {
         .task(id: phase) {
             guard phase == .active else { return }
             while !Task.isCancelled {
+                await holidayUpdates.refresh(around: CalendarDay(.now, in: CalendarDay.civilCalendar).year)
+                do {
+                    try await Task.sleep(for: .seconds(3_600))
+                } catch {
+                    return
+                }
+            }
+        }
+        .task(id: phase) {
+            guard phase == .active else { return }
+            while !Task.isCancelled {
                 today = .today
                 systemCalendar.refresh(showing: selected, today: today)
                 let midnight = today.addingDays(1).start(in: CalendarDay.gregorian())
@@ -99,6 +99,50 @@ struct CalendarScreen: View {
                 }
             }
         }
+    }
+
+    private var monthPager: some View {
+        let rowHeight: CGFloat = 44
+        let position = Binding<CalendarDay?>(
+            get: { selected.monthStart },
+            set: { month in
+                if let month, month != selected.monthStart {
+                    select(selection(in: month))
+                }
+            }
+        )
+
+        return ScrollView(.horizontal) {
+            LazyHStack(spacing: 0) {
+                ForEach(Self.months, id: \.self) { month in
+                    let pageSelection = selection(in: month)
+                    MonthGrid(dates: month.monthGrid(), palette: palette, rowHeight: rowHeight) { date in
+                        let cell = CalendarCell(
+                            date: date, selected: pageSelection, today: today,
+                            dots: systemCalendar.dots(on: date), holidaySchedules: holidayUpdates.schedules,
+                            palette: palette, compact: false
+                        )
+                        if date.isSupported {
+                            Button { select(date) } label: { cell }
+                                .buttonStyle(.plain)
+                        } else {
+                            cell
+                        }
+                    }
+                    .containerRelativeFrame(.horizontal)
+                }
+            }
+            .scrollTargetLayout()
+        }
+        .scrollIndicators(.hidden)
+        .scrollTargetBehavior(.paging)
+        .scrollPosition(id: position, anchor: .center)
+        .frame(height: MonthGridMetrics.height(rowHeight: rowHeight))
+    }
+
+    private func selection(in month: CalendarDay) -> CalendarDay {
+        let lastDay = CalendarDay.daysInMonth(year: month.year, month: month.month)
+        return month.addingDays(min(selected.day, lastDay) - 1)
     }
 
     private var monthHeader: some View {
@@ -143,7 +187,11 @@ struct CalendarScreen: View {
 
     private func monthButton(_ offset: Int) -> some View {
         let date = selected.addingMonths(offset)
-        return Button { select(date) } label: {
+        return Button {
+            withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.28)) {
+                select(date)
+            }
+        } label: {
             MonthArrow(previous: offset < 0, palette: palette, compact: false)
         }
         .buttonStyle(.plain)

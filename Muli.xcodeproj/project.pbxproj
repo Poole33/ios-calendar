@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD67F6BF0B6F47FF802A1A55 /* HolidayUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67F6BF0B6F47FF802A1A56 /* HolidayUpdates.swift */; };
 		0EDF44DD006B92E6F491850A /* MuliWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 352243AE9EE39B3EAF5F2642 /* MuliWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		11EADE43BB0CCFC9B56FDC93 /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA96F3E6BA992F7ACE676B /* CalendarDay.swift */; };
 		1400846444F5DD1286417AAA /* SystemCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192733A40FB26AF20DF6DE1D /* SystemCalendar.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD67F6BF0B6F47FF802A1A56 /* HolidayUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayUpdates.swift; sourceTree = "<group>"; };
 		1457118099BD8D54EE289942 /* CalendarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScreen.swift; sourceTree = "<group>"; };
 		192733A40FB26AF20DF6DE1D /* SystemCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCalendar.swift; sourceTree = "<group>"; };
 		1C39093FC86C1462C95015DC /* Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Widget-Info.plist"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				4DC10A22BC1E906D44A3AF26 /* AgendaView.swift */,
 				1457118099BD8D54EE289942 /* CalendarScreen.swift */,
 				264D61853732A667C726FE91 /* DateJumpSheet.swift */,
+				BD67F6BF0B6F47FF802A1A56 /* HolidayUpdates.swift */,
 				5DFEE54C053C44A3C403B2D7 /* MuliApp.swift */,
 				4D7560F05FD2A9929C8E2F5C /* SettingsSheet.swift */,
 				192733A40FB26AF20DF6DE1D /* SystemCalendar.swift */,
@@ -284,6 +287,7 @@
 				2962C00E61556988BD04F8E2 /* AgendaView.swift in Sources */,
 				1E711B9F00F6634D88F194B0 /* CalendarScreen.swift in Sources */,
 				C65286CCB8BFA42E31E03511 /* DateJumpSheet.swift in Sources */,
+				BD67F6BF0B6F47FF802A1A55 /* HolidayUpdates.swift in Sources */,
 				3C880451CDFB1DD03BDDFF4F /* MuliApp.swift in Sources */,
 				3492F7A19FD38B43A7B845E0 /* SettingsSheet.swift in Sources */,
 				1400846444F5DD1286417AAA /* SystemCalendar.swift in Sources */,

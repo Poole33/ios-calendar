@@ -106,6 +106,16 @@ struct MonthTitle: View {
     }
 }
 
+enum MonthGridMetrics {
+    static let rows = 6
+    static let weekdayHeight: CGFloat = 16
+    static let spacing: CGFloat = 2
+
+    static func height(rowHeight: CGFloat) -> CGFloat {
+        weekdayHeight + CGFloat(rows) * (rowHeight + spacing)
+    }
+}
+
 struct MonthGrid<Cell: View>: View {
     let dates: [CalendarDay]
     let palette: CalendarPalette
@@ -115,7 +125,7 @@ struct MonthGrid<Cell: View>: View {
     private let weekdays = ["一", "二", "三", "四", "五", "六", "日"]
 
     var body: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: MonthGridMetrics.spacing) {
             HStack(spacing: 0) {
                 ForEach(weekdays.indices, id: \.self) { index in
                     Text(weekdays[index])
@@ -124,9 +134,9 @@ struct MonthGrid<Cell: View>: View {
                         .frame(maxWidth: .infinity)
                 }
             }
-            .frame(height: 16)
+            .frame(height: MonthGridMetrics.weekdayHeight)
             .accessibilityHidden(true)
-            ForEach(0..<6) { row in
+            ForEach(0..<MonthGridMetrics.rows) { row in
                 HStack(spacing: 0) {
                     ForEach(dates[(row * 7)..<((row + 1) * 7)]) { date in
                         cell(date)
@@ -144,6 +154,7 @@ struct CalendarCell: View {
     let selected: CalendarDay
     let today: CalendarDay
     let dots: [ScheduleColor]
+    let holidaySchedules: MainlandHolidays.DownloadedSchedules
     let palette: CalendarPalette
     let compact: Bool
 
@@ -151,7 +162,7 @@ struct CalendarCell: View {
     private var isInMonth: Bool { date.month == selected.month && date.year == selected.year }
 
     var body: some View {
-        let info = DayInformation(date)
+        let info = DayInformation(date, holidaySchedules: holidaySchedules)
         VStack(spacing: 0) {
             Text(date.day, format: .number)
                 .font(.system(size: compact ? 14 : 17, weight: .semibold))

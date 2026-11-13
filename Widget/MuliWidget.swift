@@ -8,12 +8,16 @@ struct MonthEntry: TimelineEntry {
     let selection: CalendarDay
     let appearance: Appearance
     let dots: [String: [ScheduleColor]]
+    let holidaySchedules: MainlandHolidays.DownloadedSchedules
 }
 
 struct MonthTimeline: TimelineProvider {
     func placeholder(in context: Context) -> MonthEntry {
         let day = CalendarDay.today
-        return MonthEntry(date: .now, today: day, selection: day, appearance: Appearance(), dots: [:])
+        return MonthEntry(
+            date: .now, today: day, selection: day, appearance: Appearance(),
+            dots: [:], holidaySchedules: [:]
+        )
     }
 
     func getSnapshot(in context: Context, completion: @escaping (MonthEntry) -> Void) {
@@ -33,7 +37,8 @@ struct MonthTimeline: TimelineProvider {
             today: today,
             selection: SharedState.widgetSelection ?? today,
             appearance: SharedState.appearance,
-            dots: SharedState.eventDots
+            dots: SharedState.eventDots,
+            holidaySchedules: SharedState.holidaySchedules
         )
     }
 }
@@ -71,7 +76,8 @@ struct WidgetMonthView: View {
                 ) { date in
                     let cell = CalendarCell(
                         date: date, selected: entry.selection, today: entry.today,
-                        dots: entry.dots[date.id, default: []], palette: palette, compact: true
+                        dots: entry.dots[date.id, default: []], holidaySchedules: entry.holidaySchedules,
+                        palette: palette, compact: true
                     )
                     if date.isSupported {
                         Link(destination: CalendarRoute.day(date).url) { cell }

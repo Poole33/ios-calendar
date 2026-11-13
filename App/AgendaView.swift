@@ -4,9 +4,10 @@ struct AgendaView: View {
     let date: CalendarDay
     let palette: CalendarPalette
     let calendar: SystemCalendar
+    let holidaySchedules: MainlandHolidays.DownloadedSchedules
 
     var body: some View {
-        let info = DayInformation(date)
+        let info = DayInformation(date, holidaySchedules: holidaySchedules)
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
                 Text("\(date.month)月\(date.day)日 · \(date.weekdayName)")

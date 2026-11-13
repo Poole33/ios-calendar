@@ -42,11 +42,11 @@ struct DayInformation {
     let solarTerm: String?
     let holiday: MainlandHolidays.Mark?
 
-    init(_ date: CalendarDay) {
+    init(_ date: CalendarDay, holidaySchedules: MainlandHolidays.DownloadedSchedules = [:]) {
         lunar = LunarDate(date)
         solarTerm = SolarTerms.name(on: date)
         festival = Self.festival(on: date, lunar: lunar, solarTerm: solarTerm)
-        holiday = MainlandHolidays.mark(on: date)
+        holiday = MainlandHolidays.mark(on: date, using: holidaySchedules)
     }
 
     var caption: String { festival ?? solarTerm ?? (lunar.day == 1 ? lunar.monthName : lunar.dayName) }
