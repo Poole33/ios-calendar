@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EDF44DD006B92E6F491850A /* MuliWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 352243AE9EE39B3EAF5F2642 /* MuliWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11EADE43BB0CCFC9B56FDC93 /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA96F3E6BA992F7ACE676B /* CalendarDay.swift */; };
+		1400846444F5DD1286417AAA /* SystemCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192733A40FB26AF20DF6DE1D /* SystemCalendar.swift */; };
+		1E711B9F00F6634D88F194B0 /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457118099BD8D54EE289942 /* CalendarScreen.swift */; };
+		24B64517CDC85D753ACEFF94 /* MainlandHolidays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E2545D296CDF04328694C0 /* MainlandHolidays.swift */; };
+		25F3BC7211AB4AEC30A76DCF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C4FAC144E25B146AA1D3B196 /* PrivacyInfo.xcprivacy */; };
+		2962C00E61556988BD04F8E2 /* AgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10A22BC1E906D44A3AF26 /* AgendaView.swift */; };
+		32DE6812BC4B80BBBE7675C0 /* MainlandHolidays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E2545D296CDF04328694C0 /* MainlandHolidays.swift */; };
+		3492F7A19FD38B43A7B845E0 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7560F05FD2A9929C8E2F5C /* SettingsSheet.swift */; };
+		3C880451CDFB1DD03BDDFF4F /* MuliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFEE54C053C44A3C403B2D7 /* MuliApp.swift */; };
+		3FF3B108F366A5459D184422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B1372D7C3A9101E9A5DFDF /* Assets.xcassets */; };
+		54CD293A77C51BBB0D4CF12D /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA96F3E6BA992F7ACE676B /* CalendarDay.swift */; };
+		5750C5B6507C0A6D094F5863 /* ChineseCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48003657A92E78D4F8FCFD /* ChineseCalendar.swift */; };
+		57D1C5FD1837A44634194FC9 /* SharedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD17EDF4FECF454A12DF /* SharedState.swift */; };
+		6E6614CF0007E516D8E1D46E /* MoveMonthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6293BB5960EE26E92A191C68 /* MoveMonthIntent.swift */; };
+		913A1F52D6238CFED446E9C9 /* CalendarViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F741E6A5299CAC691E4C3E /* CalendarViews.swift */; };
+		935F50143FA482C4B43ABB86 /* CalendarViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F741E6A5299CAC691E4C3E /* CalendarViews.swift */; };
+		B8A5D2FA0209B6F65170CAE0 /* SolarTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C628D5DAFA2CB760479CE6 /* SolarTerms.swift */; };
+		C2F49FFEFFF6FEE43BB172CD /* ChineseCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48003657A92E78D4F8FCFD /* ChineseCalendar.swift */; };
+		C4E008D2C7C6788014513FAB /* MoveMonthIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6293BB5960EE26E92A191C68 /* MoveMonthIntent.swift */; };
+		C65286CCB8BFA42E31E03511 /* DateJumpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264D61853732A667C726FE91 /* DateJumpSheet.swift */; };
+		CFEABF204B32D11B6198608F /* MuliWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B37913CC94A7DA267D71696 /* MuliWidget.swift */; };
+		CFF21BD6E575A161D712F243 /* SharedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39AD17EDF4FECF454A12DF /* SharedState.swift */; };
+		F2C7F4CD12064DF50425F4E3 /* SolarTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C628D5DAFA2CB760479CE6 /* SolarTerms.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25B814CC3CA092713645D18D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEB79CB3A3EBA9996C31A292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 123B59A35512FC00D26E40F7;
+			remoteInfo = MuliWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65FD674F63C3CE58A2B26AEF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0EDF44DD006B92E6F491850A /* MuliWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1457118099BD8D54EE289942 /* CalendarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScreen.swift; sourceTree = "<group>"; };
+		192733A40FB26AF20DF6DE1D /* SystemCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCalendar.swift; sourceTree = "<group>"; };
+		1C39093FC86C1462C95015DC /* Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Widget-Info.plist"; sourceTree = "<group>"; };
+		1DD36302DE1BA54DE426F915 /* Muli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		264D61853732A667C726FE91 /* DateJumpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateJumpSheet.swift; sourceTree = "<group>"; };
+		26EA96F3E6BA992F7ACE676B /* CalendarDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
+		352243AE9EE39B3EAF5F2642 /* MuliWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MuliWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F741E6A5299CAC691E4C3E /* CalendarViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViews.swift; sourceTree = "<group>"; };
+		3D48003657A92E78D4F8FCFD /* ChineseCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseCalendar.swift; sourceTree = "<group>"; };
+		4D7560F05FD2A9929C8E2F5C /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
+		4DC10A22BC1E906D44A3AF26 /* AgendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaView.swift; sourceTree = "<group>"; };
+		4F5D14F595097794D5312B47 /* Widget-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Widget-macOS.entitlements"; sourceTree = "<group>"; };
+		5B37913CC94A7DA267D71696 /* MuliWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuliWidget.swift; sourceTree = "<group>"; };
+		5DFEE54C053C44A3C403B2D7 /* MuliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuliApp.swift; sourceTree = "<group>"; };
+		5E048042FA251691838B8BE4 /* Widget-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Widget-iOS.entitlements"; sourceTree = "<group>"; };
+		6293BB5960EE26E92A191C68 /* MoveMonthIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMonthIntent.swift; sourceTree = "<group>"; };
+		6E39AD17EDF4FECF454A12DF /* SharedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedState.swift; sourceTree = "<group>"; };
+		77DA77BF2C0E42FB94995449 /* App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "App-Info.plist"; sourceTree = "<group>"; };
+		98C628D5DAFA2CB760479CE6 /* SolarTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTerms.swift; sourceTree = "<group>"; };
+		A7B7085595238A1C88F7653D /* App-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "App-macOS.entitlements"; sourceTree = "<group>"; };
+		A9E2545D296CDF04328694C0 /* MainlandHolidays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainlandHolidays.swift; sourceTree = "<group>"; };
+		C4FAC144E25B146AA1D3B196 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D6B1372D7C3A9101E9A5DFDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB7D0EA01A9A00F59C57BC53 /* App-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "App-iOS.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C4BF233F827AF49B972EC03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43A716F564AE55CAA4BF466B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15E77DB4E79515F06A6F284F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DD36302DE1BA54DE426F915 /* Muli.app */,
+				352243AE9EE39B3EAF5F2642 /* MuliWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61374729CFAA283BD5657F25 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4DC10A22BC1E906D44A3AF26 /* AgendaView.swift */,
+				1457118099BD8D54EE289942 /* CalendarScreen.swift */,
+				264D61853732A667C726FE91 /* DateJumpSheet.swift */,
+				5DFEE54C053C44A3C403B2D7 /* MuliApp.swift */,
+				4D7560F05FD2A9929C8E2F5C /* SettingsSheet.swift */,
+				192733A40FB26AF20DF6DE1D /* SystemCalendar.swift */,
+				D6B1372D7C3A9101E9A5DFDF /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		745575A3452B6FC6A07912B9 /* Muli */ = {
+			isa = PBXGroup;
+			children = (
+				61374729CFAA283BD5657F25 /* App */,
+				C75DF72DB88E6A92ABE979CF /* Shared */,
+				D904658125F4A1F6B8215AC9 /* Widget */,
+				7F54235B6AA0645ABBC6E349 /* Configuration */,
+				15E77DB4E79515F06A6F284F /* Products */,
+			);
+			name = Muli;
+			sourceTree = "<group>";
+		};
+		7F54235B6AA0645ABBC6E349 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				77DA77BF2C0E42FB94995449 /* App-Info.plist */,
+				DB7D0EA01A9A00F59C57BC53 /* App-iOS.entitlements */,
+				A7B7085595238A1C88F7653D /* App-macOS.entitlements */,
+				C4FAC144E25B146AA1D3B196 /* PrivacyInfo.xcprivacy */,
+				1C39093FC86C1462C95015DC /* Widget-Info.plist */,
+				5E048042FA251691838B8BE4 /* Widget-iOS.entitlements */,
+				4F5D14F595097794D5312B47 /* Widget-macOS.entitlements */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C75DF72DB88E6A92ABE979CF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				26EA96F3E6BA992F7ACE676B /* CalendarDay.swift */,
+				38F741E6A5299CAC691E4C3E /* CalendarViews.swift */,
+				3D48003657A92E78D4F8FCFD /* ChineseCalendar.swift */,
+				A9E2545D296CDF04328694C0 /* MainlandHolidays.swift */,
+				6293BB5960EE26E92A191C68 /* MoveMonthIntent.swift */,
+				6E39AD17EDF4FECF454A12DF /* SharedState.swift */,
+				98C628D5DAFA2CB760479CE6 /* SolarTerms.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D904658125F4A1F6B8215AC9 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				5B37913CC94A7DA267D71696 /* MuliWidget.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		123B59A35512FC00D26E40F7 /* MuliWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 454BBBCB68AD3EBA58C5FD70 /* Build configuration list for PBXNativeTarget "MuliWidget" */;
+			buildPhases = (
+				BB6D2713710CBAA37636BA88 /* Sources */,
+				43A716F564AE55CAA4BF466B /* Frameworks */,
+				8B8586679027ABFED7D6FB01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuliWidget;
+			productName = MuliWidget;
+			productReference = 352243AE9EE39B3EAF5F2642 /* MuliWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D9F739608D8215C0A7ADE4F6 /* Muli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6675103F3C13C668ACD33C8A /* Build configuration list for PBXNativeTarget "Muli" */;
+			buildPhases = (
+				62356E1814496A62D0EBA8B0 /* Sources */,
+				0C4BF233F827AF49B972EC03 /* Frameworks */,
+				62707E90081973C7450BE624 /* Resources */,
+				65FD674F63C3CE58A2B26AEF /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE570CE38D1F3A71B074E617 /* PBXTargetDependency */,
+			);
+			name = Muli;
+			productName = Muli;
+			productReference = 1DD36302DE1BA54DE426F915 /* Muli.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEB79CB3A3EBA9996C31A292 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					123B59A35512FC00D26E40F7 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					D9F739608D8215C0A7ADE4F6 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 5A40E87FB5D206C8B89410E3 /* Build configuration list for PBXProject "Muli" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				"zh-Hans",
+				en,
+				Base,
+			);
+			mainGroup = 745575A3452B6FC6A07912B9 /* Muli */;
+			productRefGroup = 15E77DB4E79515F06A6F284F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9F739608D8215C0A7ADE4F6 /* Muli */,
+				123B59A35512FC00D26E40F7 /* MuliWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62707E90081973C7450BE624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FF3B108F366A5459D184422 /* Assets.xcassets in Resources */,
+				25F3BC7211AB4AEC30A76DCF /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B8586679027ABFED7D6FB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62356E1814496A62D0EBA8B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CD293A77C51BBB0D4CF12D /* CalendarDay.swift in Sources */,
+				913A1F52D6238CFED446E9C9 /* CalendarViews.swift in Sources */,
+				C2F49FFEFFF6FEE43BB172CD /* ChineseCalendar.swift in Sources */,
+				32DE6812BC4B80BBBE7675C0 /* MainlandHolidays.swift in Sources */,
+				6E6614CF0007E516D8E1D46E /* MoveMonthIntent.swift in Sources */,
+				57D1C5FD1837A44634194FC9 /* SharedState.swift in Sources */,
+				F2C7F4CD12064DF50425F4E3 /* SolarTerms.swift in Sources */,
+				2962C00E61556988BD04F8E2 /* AgendaView.swift in Sources */,
+				1E711B9F00F6634D88F194B0 /* CalendarScreen.swift in Sources */,
+				C65286CCB8BFA42E31E03511 /* DateJumpSheet.swift in Sources */,
+				3C880451CDFB1DD03BDDFF4F /* MuliApp.swift in Sources */,
+				3492F7A19FD38B43A7B845E0 /* SettingsSheet.swift in Sources */,
+				1400846444F5DD1286417AAA /* SystemCalendar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB6D2713710CBAA37636BA88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11EADE43BB0CCFC9B56FDC93 /* CalendarDay.swift in Sources */,
+				935F50143FA482C4B43ABB86 /* CalendarViews.swift in Sources */,
+				5750C5B6507C0A6D094F5863 /* ChineseCalendar.swift in Sources */,
+				24B64517CDC85D753ACEFF94 /* MainlandHolidays.swift in Sources */,
+				C4E008D2C7C6788014513FAB /* MoveMonthIntent.swift in Sources */,
+				CFF21BD6E575A161D712F243 /* SharedState.swift in Sources */,
+				B8A5D2FA0209B6F65170CAE0 /* SolarTerms.swift in Sources */,
+				CFEABF204B32D11B6198608F /* MuliWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE570CE38D1F3A71B074E617 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 123B59A35512FC00D26E40F7 /* MuliWidget */;
+			targetProxy = 25B814CC3CA092713645D18D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		40D5E8C10D979A1704CA4222 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Configuration/Widget-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Configuration/Widget-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Configuration/Widget-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muli.calendar.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5A10AFE3A2F2D8DF818E7A55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Configuration/App-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Configuration/App-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Configuration/App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muli.calendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+			};
+			name = Debug;
+		};
+		9DB2EEB0ECEC22B0AE7ACCBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4S3Q4P4MMM;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MULI_APP_GROUP = group.com.muli.calendar;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				"TARGETED_DEVICE_FAMILY[sdk=iphone*]" = "1,2";
+			};
+			name = Release;
+		};
+		ACF9284BB7BDFCBB0089B345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4S3Q4P4MMM;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MULI_APP_GROUP = group.com.muli.calendar;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				"TARGETED_DEVICE_FAMILY[sdk=iphone*]" = "1,2";
+			};
+			name = Debug;
+		};
+		BC40BF2E95569FCC4AA40BC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Configuration/Widget-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Configuration/Widget-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Configuration/Widget-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muli.calendar.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D6C721B780A603AA22EAABED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Configuration/App-iOS.entitlements";
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "Configuration/App-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Configuration/App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muli.calendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		454BBBCB68AD3EBA58C5FD70 /* Build configuration list for PBXNativeTarget "MuliWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40D5E8C10D979A1704CA4222 /* Debug */,
+				BC40BF2E95569FCC4AA40BC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A40E87FB5D206C8B89410E3 /* Build configuration list for PBXProject "Muli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACF9284BB7BDFCBB0089B345 /* Debug */,
+				9DB2EEB0ECEC22B0AE7ACCBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6675103F3C13C668ACD33C8A /* Build configuration list for PBXNativeTarget "Muli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A10AFE3A2F2D8DF818E7A55 /* Debug */,
+				D6C721B780A603AA22EAABED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEB79CB3A3EBA9996C31A292 /* Project object */;
+}
